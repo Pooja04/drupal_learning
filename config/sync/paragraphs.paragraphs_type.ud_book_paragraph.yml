@@ -1,0 +1,10 @@
+uuid: 972d45e9-be7e-4390-8a97-d1764bfa6dfc
+langcode: en
+status: true
+dependencies: {  }
+id: ud_book_paragraph
+label: ud_book_paragraph
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

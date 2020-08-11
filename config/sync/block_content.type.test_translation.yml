@@ -1,0 +1,8 @@
+uuid: 3d39e261-12f2-4478-a5e8-8635d0b2ba44
+langcode: en
+status: true
+dependencies: {  }
+id: test_translation
+label: 'Test translation'
+revision: 0
+description: ''

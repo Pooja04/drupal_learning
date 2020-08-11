@@ -1,0 +1,25 @@
+label: 'Test translation french'
+display:
+  default:
+    display_options:
+      title: 'अनुवाद का परीक्षण करें'
+      pager:
+        options:
+          tags:
+            previous: ‹‹fr<<
+            next: ››fr>>
+    display_title: Masterfr
+  page_1:
+    display_title: Pagefr
+    display_options:
+      title: 'Article Teaser View french'
+  page_2:
+    display_options:
+      fields:
+        field_article_tags:
+          label: 'Artic tagfr'
+        body:
+          label: bdyfr
+        field_image:
+          label: imgefr
+      title: 'Article Fields french'

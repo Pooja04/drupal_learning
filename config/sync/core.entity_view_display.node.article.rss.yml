@@ -1,0 +1,33 @@
+uuid: aeb33a72-b7c1-414b-8c0e-09d9b230e162
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_article_tags
+    - field.field.node.article.field_image
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_ud_favorite_book
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
+id: node.article.rss
+targetEntityType: node
+bundle: article
+mode: rss
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_article_tags: true
+  field_image: true
+  field_tags: true
+  field_ud_favorite_book: true
+  langcode: true

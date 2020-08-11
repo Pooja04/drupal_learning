@@ -1,0 +1,23 @@
+uuid: ce4642fe-5bb6-45cb-b8fb-ebd644c3e84a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.test_translation
+    - field.field.block_content.test_translation.body
+  module:
+    - text
+id: block_content.test_translation.default
+targetEntityType: block_content
+bundle: test_translation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

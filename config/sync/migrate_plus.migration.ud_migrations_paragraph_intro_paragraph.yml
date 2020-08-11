@@ -1,0 +1,39 @@
+uuid: e2a081d8-a7df-4149-b37c-34468bd33f94
+langcode: en
+status: true
+dependencies: {  }
+id: ud_migrations_paragraph_intro_paragraph
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - paragraph
+migration_group: null
+label: 'Image importer'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      book_id: B10
+      book_title: 'The definite guide to Drupal 7'
+      book_author: 'Benjamin Melançon et al.'
+    -
+      book_id: B20
+      book_title: 'Understanding Drupal Views'
+      book_author: 'Carlos Dinarte'
+    -
+      book_id: B30
+      book_title: 'Understanding Drupal Migrations'
+      book_author: 'Mauricio Dinarte'
+  ids:
+    book_id:
+      type: string
+process:
+  field_ud_book_paragraph_title: book_title
+  field_ud_book_paragraph_author: book_author
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: ud_book_paragraph
+migration_dependencies:
+  required: {  }
+  optional: {  }

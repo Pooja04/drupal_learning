@@ -1,0 +1,36 @@
+uuid: e5ba5bca-8952-46ab-b521-5543a2560623
+langcode: en
+status: true
+dependencies: {  }
+id: categories_csv_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: default
+label: 'Import articles'
+source:
+  plugin: csv
+  path: /Users/poojashet/Downloads/categories.csv
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - tid
+  fields:
+    -
+      name: tid
+      label: 'Unique Id'
+    -
+      name: name
+      label: name
+process:
+  tid: tid
+  name: name
+  langcode:
+    plugin: default_value
+    default_value: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: article_category_
+migration_dependencies: {  }

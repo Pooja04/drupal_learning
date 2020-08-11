@@ -1,0 +1,33 @@
+uuid: e7ae3faf-10de-499c-9ad6-705b1e1e0b2f
+langcode: en
+status: true
+dependencies: {  }
+id: custom_term_migration
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: 'Custom term migration'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      term_id: 6
+      name: Adventure
+    -
+      term_id: 7
+      name: Food
+    -
+      term_id: 8
+      name: Drinks
+  ids:
+    term_id:
+      type: integer
+process:
+  tid: term_id
+  name: name
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: interests
+migration_dependencies: null

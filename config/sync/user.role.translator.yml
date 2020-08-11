@@ -1,0 +1,35 @@
+uuid: d5f1bd0e-a6d7-4441-a395-8773dcfc74f9
+langcode: en
+status: true
+dependencies: {  }
+id: translator
+label: translator
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'administer content translation'
+  - 'administer languages'
+  - 'administer menu'
+  - 'administer site configuration'
+  - 'administer themes'
+  - 'create article content'
+  - 'create content translations'
+  - 'create terms in article_category_'
+  - 'delete any article content'
+  - 'delete article revisions'
+  - 'delete content translations'
+  - 'delete own article content'
+  - 'delete terms in article_category_'
+  - 'edit any article content'
+  - 'edit own article content'
+  - 'edit terms in article_category_'
+  - 'revert article revisions'
+  - 'translate article node'
+  - 'translate article_category_ taxonomy_term'
+  - 'translate interface'
+  - 'update content translations'
+  - 'view article revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

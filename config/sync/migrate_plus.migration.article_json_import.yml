@@ -1,0 +1,37 @@
+uuid: 54a31c63-c6d2-441a-afd3-5229f58ff026
+langcode: en
+status: true
+dependencies: {  }
+id: article_json_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: default
+label: 'Import articles json'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: 'http://my-site.local/articles.json'
+  ids:
+    - id
+  fields:
+    -
+      name: id
+      label: 'Unique Id'
+    -
+      name: title
+      label: Title
+    -
+      name: body
+      label: 'Post body'
+process:
+  title: title
+  body: body
+  type:
+    plugin: default_value
+    default_value: article
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null
