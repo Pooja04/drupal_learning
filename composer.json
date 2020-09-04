@@ -28,7 +28,8 @@
         "drupal/migrate_tools": "4.5",
         "drupal/paragraphs": "1.12",
         "drupal/pathauto": "1.8",
-        "drupal/search_api_solr": "^3.1"
+        "drupal/search_api_solr": "^3.1",
+        "vlucas/phpdotenv": "^5.1"
     },
     "require-dev": {
     },

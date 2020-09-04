@@ -1,0 +1,5 @@
+sites:
+  site1.drupallearning.local:
+    site_code: site1
+  site2.drupallearning.local:
+    site_code: site2
