@@ -42,6 +42,10 @@
         "sort-packages": true
     },
     "extra": {
+        "hooks": {
+            "post-commit": "echo commiting..test"
+           
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -77,5 +81,15 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "scripts": {
+        "cghooks": "vendor/bin/cghooks",
+        "post-install-cmd": [
+            "echo here it is testing",
+            "cghooks update"
+        ],
+        "post-status-cmd": [
+            "echo status is here"
+        ]
     }
 }
