@@ -20,8 +20,6 @@
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "drupal/devel": "^4.0",
-        "drupal/devel_php": "^1.2",
         "drupal/imce": "2.2",
         "drupal/migrate_plus": "4.2",
         "drupal/migrate_source_csv": "3.4",
@@ -32,6 +30,8 @@
         "vlucas/phpdotenv": "^5.1"
     },
     "require-dev": {
+        "drupal/devel": "^4.0",
+        "drupal/devel_php": "^1.2"
     },
     "conflict": {
         "drupal/drupal": "*"
