@@ -89,7 +89,10 @@
             "cghooks update"
         ],
         "post-status-cmd": [
-            "echo status is here"
+            "@test"
+        ],
+        "test": [
+            "echo m here see"
         ]
     }
 }
