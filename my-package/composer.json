@@ -1,5 +1,5 @@
 {
-    "name": "drupal/recommended-project",
+    "name": "customcomposer/customdependencies",
     "description": "Project template for Drupal 8 projects with a relocated document root",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -12,32 +12,12 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "path",
-            "url": "my-package"
         }
     ],
     "require": {
-        "composer/installers": "^1.2",
-        "drupal/config_ignore": "2.2",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "drupal/imce": "2.2",
-        "drupal/migrate_plus": "4.2",
-        "drupal/migrate_source_csv": "3.4",
-        "drupal/migrate_tools": "4.5",
-        "drupal/paragraphs": "1.12",
-        "drupal/pathauto": "1.8",
-        "drupal/search_api_solr": "^3.1",
-        "vlucas/phpdotenv": "^5.1",
-        "customcomposer/customdependencies": "*"
+        "drupal/backup_migrate": "4.1"
     },
-    "require-dev": {
-        "drupal/devel": "^4.0",
-        "drupal/devel_php": "^1.2"
-    },
+    
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -47,10 +27,6 @@
         "sort-packages": true
     },
     "extra": {
-        "hooks": {
-            "post-commit": "echo commiting..test"
-           
-        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -86,18 +62,5 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
-    },
-    "scripts": {
-        "cghooks": "vendor/bin/cghooks",
-        "post-install-cmd": [
-            "echo here it is testing",
-            "cghooks update"
-        ],
-        "post-status-cmd": [
-            "@test"
-        ],
-        "test": [
-            "echo m here see"
-        ]
     }
 }
