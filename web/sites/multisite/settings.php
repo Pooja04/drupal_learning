@@ -498,6 +498,11 @@ if ($settings['hash_salt']) {
  */
 # $settings['file_public_base_url'] = 'http://downloads.example.com/files';
 
+if(isset($_SERVER['HTTP_HOST'])) {
+  $host_array = explode('.', $_SERVER['HTTP_HOST']);
+  $host_code = $host_array[0];
+}
+
 /**
  * Public file path:
  *
@@ -505,7 +510,7 @@ if ($settings['hash_salt']) {
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-# $settings['file_public_path'] = 'sites/default/files';
+ $settings['file_public_path'] = 'sites/default/files/' . $host_code;
 
 /**
  * Private file path:
@@ -520,7 +525,7 @@ if ($settings['hash_salt']) {
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-# $settings['file_private_path'] = '';
+ $settings['file_private_path'] = '../private-dir/' . $host_code;
 
 /**
  * Temporary file path:
@@ -755,10 +760,7 @@ $settings['entity_update_backup'] = TRUE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-if(isset($_SERVER['HTTP_HOST'])) {
-  $host_array = explode('.', $_SERVER['HTTP_HOST']);
-  $host_code = $host_array[0];
-}
+
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../', 'drupallearning_multisite_db');
 $dotenv->load();
