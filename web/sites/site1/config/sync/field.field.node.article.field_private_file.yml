@@ -1,0 +1,27 @@
+uuid: 58f31351-4044-41b5-ace7-f65ce419f85c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_private_file
+    - node.type.article
+  module:
+    - file
+id: node.article.field_private_file
+field_name: field_private_file
+entity_type: node
+bundle: article
+label: 'private file'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: txt
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

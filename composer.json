@@ -59,7 +59,6 @@
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/sites/site1.drupal88.local/modules/contrib/{$name}": ["drupal/imce"],
             "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
