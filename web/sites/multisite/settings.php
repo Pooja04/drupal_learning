@@ -765,6 +765,8 @@ $settings['entity_update_backup'] = TRUE;
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../', 'drupallearning_multisite_db');
 $dotenv->load();
 
+$dotenvsite1 = Dotenv\Dotenv::createImmutable(__DIR__.'/../', 'drupallearning_environment_site1');
+$dotenvsite1->load();
 
 $databases['default']['default'] = array (
   'database' => $_ENV[strtoupper($host_code) . '_DB_NAME'],
@@ -779,3 +781,19 @@ $databases['default']['default'] = array (
 );
 #$settings['config_sync_directory'] = 'sites/site1.drupal88.local/files/config_bfhAr9127Y1D4sfVh3vkePtO1xi9iDUveDpqrvzv88T4BTSlLwgJ-awykX8bzWTR9pagbMyCkw/sync';
 $settings['config_sync_directory'] = 'sites/'. $host_code .'/config/sync';
+/**
+ * Set environment splits.
+ */
+$split_envs = [
+  'local',
+  'dev',
+  'stage',
+  'prod',
+  'ci',
+  'ah_other',
+];
+foreach ($split_envs as $split_env) {
+  if($_SERVER['HTTP_HOST'] == $_ENV[$split_env]) {
+    $config['config_split.config_split.' . $split_env]['status'] = 0;
+  }
+}
