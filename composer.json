@@ -32,7 +32,8 @@
         "drupal/pathauto": "1.8",
         "drupal/search_api_solr": "^3.1",
         "vlucas/phpdotenv": "^5.1",
-        "customcomposer/customdependencies": "*"
+        "customcomposer/customdependencies": "*",
+        "drupal/config_split": "1.5"
     },
     "require-dev": {
         "drupal/devel": "^4.0",
